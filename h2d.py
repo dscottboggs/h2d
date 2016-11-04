@@ -13,7 +13,7 @@ def main():
 		dec=h2d(sys.argv[1])	# and call the conversion procedure, saving the result to an int value
 	else:						#and exit with error if ther isn't one or if there are more than one arguments passed
 		error("Invalid input - " + str(len(sys.argv)) + " is too many or too few arguments")
-	print dec		# finally, print the value
+	return dec		# finally, print the value
 
 def h2d(hexIn):		#the conversion algorithm
 	decOut=0		# output variable
@@ -32,4 +32,4 @@ def h2d(hexIn):		#the conversion algorithm
 def error(s):
 	print("Error: " + s)		#error message
 	exit(1)
-main()
+print(main())
